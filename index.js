@@ -102,11 +102,36 @@
 // umbermoot = 2 * pi * radius;
 
 // console.log(umbermoot);
-const PI = 3.14;
+// const PI = 3.14;
 
-document.getElementById("mySubmit").onclick = function () {
-  radius = document.getElementById("myText").value;
-  radius = Number(radius);
-  umbermoot = 2 * PI * radius;
-  document.getElementById("myh3").textContent = umbermoot + "cm";
-};
+// document.getElementById("mySubmit").onclick = function () {
+//   radius = document.getElementById("myText").value;
+//   radius = Number(radius);
+//   umbermoot = 2 * PI * radius;
+//   document.getElementById("myh3").textContent = umbermoot + "cm";
+// };
+
+//math = built in object that provides
+
+// let x = 3.21;
+// let y = 2;
+// let z;
+
+// z = Math.floor(x);
+// z = Math.round(x);
+// z = Math.ceil(x);
+// z = Math.trunc(x);
+// z = Math.pow(x);
+// z = Math.floor(x);
+// z = Math.sqrt(x);
+// z = Math.log(x);
+// z = Math.sin(x);
+// z = Math.sin(x);
+// z = Math.cos(x);
+// z = Math.tan(x);
+// z = Math.abs(x);
+// z = Math.sign(x);
+
+// console.log(Z);
+
+// random number generator

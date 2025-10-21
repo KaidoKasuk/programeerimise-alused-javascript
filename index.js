@@ -135,3 +135,26 @@
 // console.log(Z);
 
 // random number generator
+// this is 1 to 6 very cool
+// let randomNum = Math.floor(Math.random() * 6) + 1;
+
+// console.log(randomNum);
+
+// const myButton = document.getElementById("myButton");
+// const label1 = document.getElementById("myLabel");
+// const label2 = document.getElementById("myLabel2");
+// const label3 = document.getElementById("myLabel3");
+// const min = 1;
+// const max = 6;
+// let randomNum1;
+// let randomNum2;
+// let randomNum3;
+
+// myButton.onclick = function () {
+//   randomNum1 = Math.floor(Math.random() * max) + min;
+//   randomNum2 = Math.floor(Math.random() * max) + min;
+//   randomNum3 = Math.floor(Math.random() * max) + min;
+//   Label1.textContent = randomNum1;
+//   Label2.textContent = randomNum2;
+//   Label3.textContent = randomNum3;
+// };

@@ -158,3 +158,55 @@
 //   Label2.textContent = randomNum2;
 //   Label3.textContent = randomNum3;
 // };
+
+//if statements
+const myText = document.getElementById("myText");
+const mySubmit = document.getElementById("mySubmit");
+const resultElement = document.getElementById("resultElement");
+let age;
+
+mySubmit.onclick = function () {
+  age = myText.value;
+  age = Number(age);
+
+  if (age >= 100) {
+    resultElement.textContent = `You are TOO old`;
+  } else if (age == 0) {
+    resultElement.textContent = `You cant go were just born`;
+  } else if (age < 0) {
+    resultElement.textContent = `You cant be below 0`;
+  } else if (age >= 18) {
+    resultElement.textContent = `You are old enough`;
+  } else {
+    resultElement.textContent = `You must 18+`;
+  }
+};
+// let time = 9;
+// if (time < 12) {
+//   console.log("good morining");
+// } else {
+//   console.log("good night");
+// }
+
+// let isStudent = false;
+
+// if (isStudent) {
+//   console.log("you are a stuent");
+// } else {
+//   console.log("You are not a student");
+// }
+
+// let age = 20;
+// let license = false;
+
+// if (age >= 16) {
+//   console.log("you must old enough to drive");
+
+//   if (license) {
+//     consoele.log("you have your license");
+//   } else {
+//     consoele.log("you aint have license");
+//   }
+// } else {
+//   console.log("you must 16+ to have license");
+// }

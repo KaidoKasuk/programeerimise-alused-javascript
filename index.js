@@ -1,6 +1,8 @@
 // // console.log("hello");
 // // console.log("I like pizza");
 
+// const { use } = require("react");
+
 // // window.alert("this is an alert");
 // // window.alert("I love pizza");
 // // // this is an comment cntrl k+c cntrl k+
@@ -160,27 +162,27 @@
 // };
 
 //if statements
-const myText = document.getElementById("myText");
-const mySubmit = document.getElementById("mySubmit");
-const resultElement = document.getElementById("resultElement");
-let age;
+// const myText = document.getElementById("myText");
+// const mySubmit = document.getElementById("mySubmit");
+// const resultElement = document.getElementById("resultElement");
+// let age;
 
-mySubmit.onclick = function () {
-  age = myText.value;
-  age = Number(age);
+// mySubmit.onclick = function () {
+//   age = myText.value;
+//   age = Number(age);
 
-  if (age >= 100) {
-    resultElement.textContent = `You are TOO old`;
-  } else if (age == 0) {
-    resultElement.textContent = `You cant go were just born`;
-  } else if (age < 0) {
-    resultElement.textContent = `You cant be below 0`;
-  } else if (age >= 18) {
-    resultElement.textContent = `You are old enough`;
-  } else {
-    resultElement.textContent = `You must 18+`;
-  }
-};
+//   if (age >= 100) {
+//     resultElement.textContent = `You are TOO old`;
+//   } else if (age == 0) {
+//     resultElement.textContent = `You cant go were just born`;
+//   } else if (age < 0) {
+//     resultElement.textContent = `You cant be below 0`;
+//   } else if (age >= 18) {
+//     resultElement.textContent = `You are old enough`;
+//   } else {
+//     resultElement.textContent = `You must 18+`;
+//   }
+// };
 // let time = 9;
 // if (time < 12) {
 //   console.log("good morining");
@@ -210,3 +212,176 @@ mySubmit.onclick = function () {
 // } else {
 //   console.log("you must 16+ to have license");
 // }
+
+// // const myCheckBox = document.getElementById("myCheckBox");
+// // const visaBtn = document.getElementById("visaBtn");
+// // const mastercardBtn = document.getElementById("mastercardBtn");
+// // const payPalBtn = document.getElementById("payPalBtn");
+// // const mySubmit = document.getElementById("mySubmit");
+// // const subResult = document.getElementById("subResult");
+// // const paymentResult = document.getElementById("paymentResult");
+
+// // mySubmit.onclick = function () {
+// //   if (myCheckBox.checked) {
+// //     subResult.textContent = `You are subscribed`;
+// //   } else {
+// //     subResult.textContent = `You are NOT subscribed`;
+// //   }
+
+// //   if (visaBtn.checked) {
+// //     paymentResult.textContent = `visa`;
+// //   } else if (mastercardBtn.checked) {
+// //     paymentResult.textContent = `mastercard`;
+// //   } else if (payPalBtn.checked) {
+// //     paymentResult.textContent = `paypal`;
+// //   } else {
+// //     paymentResult.textContent = `You didnt choose payment`;
+// //   }
+// // };
+
+//teranry condtion ? codeiftrue : codeiffalse
+// // let age = 11;
+// // let message = age >= 18 ? "your and an adult" : "your are an minor";
+
+// // console.log(message);
+
+// let time = 16;
+// let greeting = time < 12 ? "good morning" : "good afternoon";
+// console.log(greeting);
+
+// // let isStudent = true;
+// // let message = isStudent ? "you are an student" : "you are not a Student";
+// // console.log(message);
+
+// let purchaseAmount = 125;
+// let discount = purchaseAmount >= 100 ? 10 : 0;
+// console.log(
+//   `Your total is $${purchaseAmount - purchaseAmount * (discount / 100)}`
+// );
+
+// // //SWITCHES//
+// let day = "pizza";
+
+// switch (day) {
+//   case 1:
+//     console.log("It is monday");
+//     break;
+//   case 2:
+//     console.log("It is tuesday");
+//     break;
+//   case 3:
+//     console.log("It is wednesday");
+//     break;
+//   case 4:
+//     console.log("It is thursday");
+//     break;
+//   case 5:
+//     console.log("It is friday");
+//     break;
+//   case 6:
+//     console.log("It is saturday");
+//     break;
+//   case 7:
+//     console.log("It is sunday");
+//     break;
+
+//   default:
+//     console.log(`${day} is not right input`);
+// }
+
+// let testScore = 900;
+// let letterGrade;
+
+// switch (true) {
+//   case testScore > 100:
+//     letterGrade = "max 100";
+//     break;
+//   case testScore >= 90:
+//     letterGrade = "5";
+//     break;
+//   case testScore >= 75:
+//     letterGrade = "4";
+//     break;
+//   case testScore >= 50:
+//     letterGrade = "3";
+//     break;
+
+//   case testScore < 50:
+//     letterGrade = "2";
+//     break;
+//   default:
+//     letterGrade = "Not a score";
+// }
+// console.log(letterGrade);
+
+//string methods
+
+// // // let fullName = "jah töötab";
+
+// // // let firstName = fullName.slice(0, fullName.indexOf(" "));
+// // // let lastName = fullName.slice(fullName.indexOf(" ") + 1);
+
+// // // console.log(firstName);
+
+// // // console.log(lastName);
+
+// // // const email = "villu@voco.ee";
+// // // let username = email.slice(0, email.indexOf("@"));
+// // // let extension = email.slice(email.indexOf("@") + 1, email.length);
+// // // console.log(username);
+// // // console.log(extension, email.length);
+
+// let age = 22;
+// console.log(username);
+// username.charAt(0);
+// console.log(username.charAt(0)); //.charAT võtab kindla märgi olenvat valitud
+// console.log(username.length); //korjab stringi pikkuse
+// console.log(username.trim()); //trimmerdab stringis spaceid maha
+// console.log(username.concat(age)); //liidab muud väärtused (stringina)
+// console.log(username.slice(1, 2)); //cuttib stringist mingi osa
+// console.log(username.substr(1, 2)); //cuttib teistmoodi
+// console.log(username.repeat(2)); //korrutab stringi
+// console.log(username.isWellFormed()); // \on kahtlane
+
+// let username = window.prompt("Enter your username");
+// username = username.trim();
+// let letter = username.charAt(0);
+// letter = letter.toUpperCase();
+
+// let char = username.slice(1);
+// char = char.toLowerCase();
+// username = letter + char;
+
+// let username = window.prompt("Enter your username");
+// username =
+//   username.trim().charAt(0).toUpperCase() +
+//   username.trim().slice(1).toLowerCase();
+// console.log(username);
+
+// // // const temp = 2;
+
+// // // if (temp <= 0 || temp > 30) {
+// // //   console.log("The weather is BAD");
+// // // } else {
+// // //   console.log("the weather is GOOD");
+// // // }
+
+// const isSunny = false;
+// if (!isSunny) {
+//   console.log("it is not sunny");
+// } else {
+//   console.log("it is  sunny");
+// }
+// = regular
+// == to if they are equal
+// === equal and sama datatype
+
+// // // const PI == 3.14
+
+// // // if (PI == 3.14){
+// // //   console.log("that is not PI")
+
+// // // }
+// // // else {
+// // //   console.log("this is not PI")
+// // // }

@@ -1,7 +1,7 @@
 let vanus = window.prompt("Kui vana sina oled?");
 
 if (isNaN(vanus)) {
-  window.prompt("Kui vana sina oled?");
+  alert("See pole õige vanus, värskenda lehte");
 } else if (vanus >= 7 && vanus <= 16)
   alert(" sa oled põhikooli õpilane ja sina sööd kell 10");
 else if (vanus >= 17 && vanus <= 20) {
@@ -11,9 +11,7 @@ else if (vanus >= 17 && vanus <= 20) {
 } else if (vanus < 7 && vanus >= 0) {
   alert("sa käid veel lasteaias...");
 } else if (vanus > 120) {
-  alert("Sa ei ole nii vana");
-  window.prompt("Kui vana sina oled?");
+  alert("Sa ei ole nii vana, värskenda lehte");
 } else {
-  alert("See pole õige vanus");
-  window.prompt("Kui vana sina oled?");
+  alert("See pole õige vanus, värskenda lehte");
 }

@@ -437,3 +437,42 @@
 //     console.log(i);
 //   }
 // }
+
+// function happyBirthday(username) {
+//   console.log("happy brithday to you");
+//   console.log("happy brithday to you");
+//   console.log(`happy brithday dear ${username}`);
+//   console.log("happy brithday to you");
+// }
+// happyBirthday("Brocode");
+
+// function add(x, y) {
+//   return (result = x + y);
+// }
+// function subtract(x, y) {
+//   return (result = x - y);
+// }
+// console.log(ifEven(1));
+
+// function ifEven(number) {
+//   if (number % 2 === 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// function isValidEmail(email){
+
+// }
+// console.log(isValidEmail("brocode@"));
+
+function function1() {
+  let x = 1;
+  console.log(x);
+}
+
+function function1() {
+  let x = 1;
+  console.log(x);
+}

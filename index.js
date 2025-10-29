@@ -385,3 +385,55 @@
 // // // else {
 // // //   console.log("this is not PI")
 // // // }
+
+// let username = "";
+
+// // while (username === "") {
+// //   console.log("you didnt enter your name");
+// // }
+
+// // console.log(`hello ${username})`);
+
+// while (username === "" || username === null) {
+//   username = window.prompt("enter your username");
+// }
+// console.log(`hello ${username}`);
+
+// let loggedIn = false;
+// let username;
+// let password;
+
+// // while (!loggedIn) {
+// //   username = window.prompt(`Enter your username`);
+// //   password = window.prompt(`Enter your password`);
+
+// //   if (username === "user" && password === "pass") {
+// //     loggedIn = true;
+// //     console.log("you are logged in");
+// //   } else {
+// //     console.log("Invalid pass or username");
+// //   }
+// // }
+
+// for (let i = 0.2; i > 0; i -= 0.1) {
+//   console.log(i);
+// }
+
+// console.log("happy new year");
+
+// for (let i = 1; i <= 20; i++) { jätab ühe vahele
+//   if (i == 13) {
+//     continue;
+//   } else {
+//     console.log(i);
+//   }
+// }
+
+// //lopetab 13 juures ära
+// for (let i = 1; i <= 20; i++) {
+//   if (i == 13) {
+//     break;
+//   } else {
+//     console.log(i);
+//   }
+// }

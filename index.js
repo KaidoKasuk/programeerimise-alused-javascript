@@ -556,3 +556,35 @@
 // const fullName = combineString("Mr", "spongebob", "the", "3rd");
 
 // console.log(fullName);
+
+// hello(leave);
+
+// function hello(callback) {
+//   console.log("hello");
+//   callback();
+// }
+
+// function wait() {
+//   console.log("hello");
+// }
+// function leave() {
+//   console.log("leave");
+// }
+
+// function goodbye() {
+//   console.log("goobye");
+// }
+
+// sum(displayPage, 1, 2);
+// function sum(callback, x, y) {
+//   let result = x + y;
+//   callback(result);
+// }
+
+// function displayConsole(result) {
+//   console.log = x + y;
+// }
+
+// function displayPage(result) {
+//   document.getElementById("myId").textContent = result;
+// }

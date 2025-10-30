@@ -467,12 +467,92 @@
 // }
 // console.log(isValidEmail("brocode@"));
 
-function function1() {
-  let x = 1;
-  console.log(x);
-}
+// function function1() {
+//   let x = 1;
+//   console.log(x);
+// }
 
-function function1() {
-  let x = 1;
-  console.log(x);
-}
+// function function1() {
+//   let x = 1;
+//   console.log(x);
+// }
+
+// let fruits = ["apple", "orange", "banana", "coconut"];
+
+// // fruits.push("coconut");
+// // // fruits.shift();
+// // // fruits.unshift();
+// // fruits.pop();
+// // let numOfFruits = fruits.length;
+// // let index = fruits.indexOf("mango");
+// // console.log(index);
+
+// // for (let i = fruits.length - 1; i >= 0; i--) {
+// //   console.log(fruits[i]);
+// // }
+// fruits.sort().reverse();
+// for (let fruit of fruits) {
+//   console.log(fruit);
+// }
+////easyyyyyyyyy but above examples needs extra learning
+// let numbers = [1, 2, 3, 4];
+// let maximum = Math.max(...numbers);
+// let minimum = Math.min(...numbers);
+
+// console.log(minimum);
+
+// let username = "Bro Code";
+
+// // let letters = [...username].join("  "); // very cool! :D
+// let letters = [...username].join("");
+// console.log(letters);
+
+//
+
+// let fruits = ["apple", "orange", "banana", "coconut"];
+// let newFruits = ["potato"];
+
+// let foods = [...fruits, ...newFruits, "carrot"];
+// console.log(foods);
+
+// const food1 = "pizza";
+// const food2 = "burger";
+// const food3 = "sushi";
+
+// function openfridge(...foods) {
+//   console.log(foods);
+// }
+// function getFood(...foods) {
+//   return foods;
+// }
+// openfridge(food1, food2, food3);
+
+// const foods = getFood(food1, food2, food3);
+
+// function sum(...numbers) {
+//   let result = 0;
+//   for (let number of numbers) {
+//     result += number;
+//   }
+//   return result;
+// }
+// const total = sum(1, 2, 3, 4);
+// console.log(`Your total is ${total}`);
+
+// function getAvarage(...numbers) {
+//   let result = 0;
+//   for (let number of numbers) {
+//     result += number;
+//   }
+//   return result / numbers.length;
+// }
+// const total = getAvarage(70, 80, 90);
+// console.log(`avarage is ${total}`);
+
+// function combineString(...strings) {
+//   return strings.join(" ");
+// }
+
+// const fullName = combineString("Mr", "spongebob", "the", "3rd");
+
+// console.log(fullName);

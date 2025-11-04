@@ -511,7 +511,7 @@
 
 // let fruits = ["apple", "orange", "banana", "coconut"];
 // let newFruits = ["potato"];
-
+// arrays
 // let foods = [...fruits, ...newFruits, "carrot"];
 // console.log(foods);
 

@@ -588,3 +588,191 @@
 // function displayPage(result) {
 //   document.getElementById("myId").textContent = result;
 // }
+
+// forEach()
+//array.ForEach(callback) element, index, arrays on võimalused
+
+// let numbers = [1, 2, 3, 4, 5];
+// numbers.forEach(double);
+// numbers.forEach(display);
+
+// // function double(element, index, array) {
+// //   array[index] = element * 2;
+// // }
+
+// // function trimple(element, index, array) {
+// //   array[index] = element * 3;
+// // }
+
+// function double(element, index, array) {
+//   array[index] = Math.pow(element, 2); //power of 2
+// }
+
+// function display(element) {
+//   console.log(element);
+// }
+
+// // let fruits = ["apple", "orange", "banana", "coconut"];
+
+// // fruits.forEach(upperCase);
+// // fruits.forEach(display);
+
+// // function upperCase(element, index, array) {
+// //   array[index] = element.toUpperCase();
+// // }
+
+// // function display(element) {
+// //   console.log(element);
+// // }
+
+// // let fruits = ["apple", "orange", "banana", "coconut"];
+// // fruits.forEach(capitalize);
+// // fruits.forEach(display);
+// // // function upperCase(element, index, array) {
+// // //   array[index] = element.toUpperCase();
+// // // }
+
+// // function capitalize(element, index, array) {
+// //   array[index] = element.charAt(0).toUpperCase() + element.slice(1);
+// // }
+
+// // function display(element) {
+// //   console.log(element);
+// // }
+
+//.map sama mis ForEach aga outputib array
+
+// // // // const numbers = [1, 2, 3, 4, 5];
+// // // // const squere = numbers.map(squere);
+// // // // const cubes = numbers.map(cube);
+// // // // console.log(squere);
+
+// // // // function squere(element) {
+// // // //   return Math.pow(element, 2);
+// // // // }
+
+// // // // function cube(element) {
+// // // //   return Math.pow(element, 1);
+// // // // }
+
+// const students = ["kiire", "vaaa", "kiirus"];
+// const studentsUpper = students.map(upperCase);
+// const studentsLower = students.map(lowerCase);
+
+// console.log(studentsLower);
+
+// function upperCase(element) {
+//   return element.toUpperCase();
+// }
+// console.log(studentsLower);
+// function lowerCase(element) {
+//   return element.toLowerCase();
+// }
+// const dates = ["2025-02-02", "2024-02-02", "2023-02-02"];
+// const formattedDates = dates.map(formatDates);
+
+// console.log(formattedDates);
+
+// function formatDates(element) {
+//   const parts = element.split("-");
+//   return `${parts[1]}.${parts[2]}{${parts[0]}`;
+// }
+// let numbers = [1, 2, 3, 4, 5, 6, 7];
+// let evenNums = numbers.filter(isEven);
+// let oddNums = numbers.filter(isOdd);
+
+// console.log(oddNums);
+
+// function isEven(element) {
+//   return element % 2 === 0;
+// }
+
+// function isOdd(element) {
+//   return element % 2 !== 0;
+// }
+
+// const age = [16, 17, 18, 19, 20, 60];
+
+// const adult = age.filter(isAdult);
+
+// console.log(adult);
+
+// function isAdult(element) {
+//   return element >= 18 == 1;
+// }
+// const fruits = ["apple", "orange", "banana", "coconut", "kiwi"];
+// const long = fruits.filter(getShortWords);
+
+// console.log(long);
+
+// function getShortWords(element) {
+//   return element.length >= 6 == 1;
+// }
+
+//REDUCE
+
+// const prices = [4, 2, 2, 1, 3, 20, 22];
+// const total = prices.reduce(sum);
+
+// console.log(total.toFixed(2));
+
+// function sum(accumilator, element) {
+//   return accumilator + element;
+// }
+
+// const grades = [75, 50, 90, 80, 65, 95];
+// const minimum = grades.reduce(getMin);
+// const maximum = grades.reduce(getMax);
+
+// console.log(maximum);
+
+// function getMax(accumilator, element) {
+//   return Math.max(accumilator + element);
+// }
+
+// function getMin(accumilator, element) {
+//   return Math.(accumilator + element);
+// }
+//
+//
+
+//
+//
+// function expressions
+
+// function hello() {
+//   console.log("hello");
+// }
+
+// const hello = function () {
+//   console.log("hello");
+// };
+
+// setTimeout(useCallback, 3000);
+
+// setTimeout(function () {
+//   console.log("hello");
+// });
+
+// const numbers = [1, 2, 3, 4, 5];
+// const squeres = numbers.map(function (element) {
+//   return Math.pow(element, 2);
+// });
+// console.log(squeres);
+
+// // // // const hello = () => console.log("hello");
+// // // // hello();
+
+// const hello = (name, age) => {
+//   console.log(`hello ${name}`);
+//   console.log(`You are ${age} years old`);
+// };
+// hello("Bro", 25);
+
+// setTimeout(() => console.log("hello"));
+
+
+const numbers = [1, 2, 3, 4, 5,6 ];
+ squeres = numbers.map(element) => Math.pow(element, 2)
+
+ console.log(squeres)

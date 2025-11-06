@@ -771,8 +771,46 @@
 
 // setTimeout(() => console.log("hello"));
 
+// // const numbers = [1, 2, 3, 4, 5,6 ];
+// //  squeres = numbers.map(element) => Math.pow(element, 2)
 
-const numbers = [1, 2, 3, 4, 5,6 ];
- squeres = numbers.map(element) => Math.pow(element, 2)
+// //  console.log(squeres)
 
- console.log(squeres)
+//OBJEKTID
+// const person1 = {
+//   firstname: "Spongebob",
+//   lastname: "Squerepants",
+//   age: 30,
+//   isEmployed: true,
+//   sayhello: function () {
+//     console.log(`Hi i am ${this.firstname}`);
+//   },
+//   eat: function () {
+//     console.log(`I am eating ${this.lastname}`);
+//   },
+// };
+
+// const person2 = {
+//   firstname: "Patric",
+//   lastname: "Gigachad",
+//   age: 50,
+//   isEmployed: false,
+//   sayhello: function () {
+//     console.log("HELLO");
+//   },
+// };
+// person1.sayhello();
+// person1.eat();
+// // // person1.sayhello();
+// // // person2.sayhello();
+// // // console.log(person1.firstname);
+// // // console.log(person1.lastname);
+// // // console.log(person1.age);
+// // // console.log(person1.isEmployed);
+
+// // // console.log(person2.firstname);
+// // // console.log(person2.lastname);
+// // // console.log(person2.age);
+// // // console.log(person2.isEmployed);
+
+// console.log(this);

@@ -13,6 +13,7 @@ const kpiAvg = document.getElementById("kpi-avg");
 const kpiTh = document.getElementById("kpi-th");
 
 const countInput = document.getElementById("count");
+
 // Funktsioon tulemuste kuvamiseks
 function renderScores() {
   scoreList.innerHTML = "";
@@ -23,8 +24,19 @@ function renderScores() {
   });
 }
 
-//Kuvame, mitu elementi on massiivis
+// Kuvame, mitu elementi on massiivis
 kpiCount.textContent = currentScores.length;
+
+//Näita keskimist
+function showAverage() {
+  kpiAvg.textContent = (
+    currentScores.reduce(sum) / currentScores.length
+  ).toFixed(2);
+
+  function sum(previous, next) {
+    return previous + next;
+  }
+}
 
 // lisa boonus
 function addBonus() {
@@ -35,6 +47,25 @@ function addBonus() {
 //filter 60 või suurem
 function filterByThreshold() {
   const newScores = currentScores.filter((score) => score > 60);
+  currentScores = newScores;
+  renderScores();
+}
+//taasta algseis
+function resetAll() {
+  currentScores = [...scores];
+  renderScores(currentScores);
+  kpiAvg.textContent = "–";
+}
+//geneeri uued skoorid
+function makeRandom() {
+  const newScores = [];
+  //korrutan counti random skooriga ja siis .push arraysse
+  for (let i = 1; i <= countInput.value; i++) {
+    makeRandomScores = Math.floor(Math.random() * 100) + 1;
+    console.log(makeRandomScores);
+    newScores.push(makeRandomScores);
+  }
+  kpiAvg.textContent = "–";
   currentScores = newScores;
   renderScores();
 }

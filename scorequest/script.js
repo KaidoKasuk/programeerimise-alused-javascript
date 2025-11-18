@@ -25,6 +25,7 @@ function renderScores() {
 }
 
 // Kuvame, mitu elementi on massiivis
+
 kpiCount.textContent = currentScores.length;
 
 //Näita keskimist
@@ -49,12 +50,14 @@ function filterByThreshold() {
   const newScores = currentScores.filter((score) => score > 60);
   currentScores = newScores;
   renderScores();
+  kpiAvg.textContent = "–";
 }
 //taasta algseis
 function resetAll() {
   currentScores = [...scores];
   renderScores(currentScores);
   kpiAvg.textContent = "–";
+  kpiCount.textContent = currentScores.length;
 }
 //geneeri uued skoorid
 function makeRandom() {
@@ -67,5 +70,7 @@ function makeRandom() {
   }
   kpiAvg.textContent = "–";
   currentScores = newScores;
+  //õige number Elemente kasti
+  kpiCount.textContent = countInput.value;
   renderScores();
 }

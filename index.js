@@ -3,6 +3,8 @@
 
 // const { use } = require("react");
 
+// const { use } = require("react");
+
 // // window.alert("this is an alert");
 // // window.alert("I love pizza");
 // // // this is an comment cntrl k+c cntrl k+
@@ -814,3 +816,152 @@
 // // // console.log(person2.isEmployed);
 
 // console.log(this);
+
+// // constructor
+// function Car(make, model, year, color) {
+//   this.make = make;
+//   this.model = model;
+//   this.year = year;
+//   this.color = color;
+//   this.drive = function () {
+//     console.log(`You drive the ${this.model}`);
+//   };
+// }
+// const car1 = new Car("ford", "musthang", 2024, "red");
+// const car2 = new Car("tesla", "s", 2022, "white");
+// const car3 = new Car("Dodge", "charger", 2000, "yellow");
+// console.log(car1.make);
+// console.log(car2.make);
+// car1.drive();
+
+// classes
+
+// class Product {
+//   constructor(name, price) {
+//     this.name = name;
+//     this.price = price;
+//   }
+
+//   displayProduct() {
+//     console.log(`Product: ${this.name}`);
+//     console.log(`price: $ ${this.price.toFixed(2)}`);
+//   }
+
+//   calculateTotal(salesTax) {
+//     return this.price + this.price * salesTax;
+//   }
+// }
+
+// const salesTax = 0.05;
+// const Product1 = new Product("shirts", 22.22);
+// const Product2 = new Product("pants", 2222.22);
+
+// Product1.displayProduct();
+
+// const total = Product1.calculateTotal(salesTax);
+// console.log(total);
+
+// static //
+
+// class mathutil {
+//   static PI = 3.14;
+
+//   static getDiameter(radius) {
+//     return radius * 2;
+//   }
+//   static getCircumference(radius) {
+//     return 2 * this.PI * radius;
+//   }
+//   static getArea(radius) {
+//     return this.PI * radius * radius;
+//   }
+// }
+
+// console.log(mathutil);
+// console.log(mathutil.getDiameter(10));
+// console.log(mathutil.getCircumference(10));
+// console.log(mathutil.getArea(10));
+
+// class User {
+//   static userCount = 0;
+
+//   constructor(username) {
+//     this.username = username;
+//     User.userCount++;
+//   }
+//   sayHello() {
+//     console.log(`Hello my name is ${this.username}`);
+//   }
+// }
+
+// const user1 = new User("spongebob");
+// const user2 = new User("Patric");
+// const user3 = new User("Sandy");
+
+// console.log(user1);
+// console.log(User.userCount);
+// user1.sayHello();
+
+//inheritance
+
+class Animal {
+  alive = true;
+
+  Eat() {
+    console.log(`This ${this.name} is eating`);
+  }
+
+  sleep() {
+    console.log(`This ${this.name} is sleeping`);
+  }
+}
+class Rabbit extends Animal {
+  constructor(name, age, runSpeed) {
+    super();
+    this.name = name;
+    this.age = age;
+    this.runSpeed = runSpeed;
+  }
+
+  //   name = "rabbit";
+  //   alive = true;
+  //   Eat() {
+  //     console.log(`This ${this.name} is eating`);
+  //   }
+
+  //   sleep() {
+  //     console.log(`This ${this.name} is sleeping`);
+  //   }
+  //   run() {
+  //     console.log(`This ${this.name} is running`);
+  //   }
+}
+class Fish extends Animal {
+  constructor(name, age, runSpeed) {
+    super();
+    this.name = name;
+    this.age = age;
+    this.runSpeed = runSpeed;
+  }
+  name = "fish";
+}
+class Hawk extends Animal {
+  constructor(name, age, flySpeed) {
+    super();
+    this.name = name;
+    this.age = age;
+    this.flySpeed = flySpeed;
+  }
+  name = "hawk";
+}
+
+const rabbit = new Rabbit();
+const fish = new Fish();
+const hawk = new Hawk();
+
+// console.log(hawk.alive);
+// hawk.Eat();
+// hawk.sleep();
+// rabbit.run();
+
+// super keyword//

@@ -936,28 +936,28 @@ class Rabbit extends Animal {
   //     console.log(`This ${this.name} is running`);
   //   }
 }
-class Fish extends Animal {
-  constructor(name, age, runSpeed) {
-    super();
-    this.name = name;
-    this.age = age;
-    this.runSpeed = runSpeed;
-  }
-  name = "fish";
-}
-class Hawk extends Animal {
-  constructor(name, age, flySpeed) {
-    super();
-    this.name = name;
-    this.age = age;
-    this.flySpeed = flySpeed;
-  }
-  name = "hawk";
-}
+// class Fish extends Animal {
+//   constructor(name, age, runSpeed) {
+//     super();
+//     this.name = name;
+//     this.age = age;
+//     this.runSpeed = runSpeed;
+//   }
+//   name = "fish";
+// }
+// class Hawk extends Animal {
+//   constructor(name, age, flySpeed) {
+//     super();
+//     this.name = name;
+//     this.age = age;
+//     this.flySpeed = flySpeed;
+//   }
+//   name = "hawk";
+// }
 
-const rabbit = new Rabbit();
-const fish = new Fish();
-const hawk = new Hawk();
+// const rabbit = new Rabbit();
+// const fish = new Fish();
+// const hawk = new Hawk();
 
 // console.log(hawk.alive);
 // hawk.Eat();
@@ -965,3 +965,98 @@ const hawk = new Hawk();
 // rabbit.run();
 
 // super keyword//
+
+// getters and setters
+
+// class Rectangle {
+//   constructor(width, height) {
+//     this.width = width;
+//     this.height = height;
+//   }
+
+//   set width(newWidth) {
+//     if (newWidth > 0) {
+//       this._width = newWidth;
+//     } else {
+//       console.error("width must be a positive number");
+//     }
+//   }
+
+//   set height(newHeight) {
+//     if (newHeight > 0) {
+//       this._height = newHeight;
+//     } else {
+//       console.error("height must be a positive number");
+//     }
+//   }
+
+//   get width() {
+//     return this._width;
+//   }
+//   get height() {
+//     return this._height;
+//   }
+
+//   get area() {
+//     return (this._width * this._height).toFixed(1);
+//   }
+// }
+
+// const rectangle = new Rectangle(5, 3);
+
+// console.log(rectangle.width);
+// console.log(rectangle.height);
+// console.log(rectangle.area);
+
+class Person {
+  constructor(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+
+  set firstName(newFirstName) {
+    if (typeof newFirstName === "string" && newFirstName.length > 0)
+      this._firstName = newFirstName;
+    else {
+      console.error("first name must be a non-empty string  ");
+    }
+  }
+
+  set lastName(newLastName) {
+    if (typeof newLastName === "string" && newLastName.length > 0)
+      this._lastName = newLastName;
+    else {
+      console.error("Last name must be a non-empty string  ");
+    }
+  }
+
+  set age(newAge) {
+    if (typeof newAge === "number" && newAge >= 0) {
+      this._age = newAge;
+    } else {
+      console.error("Age must be a non-negative number");
+    }
+  }
+
+  get firstName() {
+    return this._firstName;
+  }
+  get lastName() {
+    return this._lastName;
+  }
+
+  get fullName() {
+    return this.firstName + " " + this.lastName;
+  }
+  get age() {
+    return this._age;
+  }
+}
+
+const person = new Person("Juhan", "Tamm", 2);
+
+console.log(person.firstName);
+console.log(person.lastName);
+console.log(person.fullName);
+console.log(person.age);

@@ -1008,55 +1008,184 @@ class Rabbit extends Animal {
 // console.log(rectangle.height);
 // console.log(rectangle.area);
 
-class Person {
-  constructor(firstName, lastName, age) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-  }
+// class Person {
+//   constructor(firstName, lastName, age) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age;
+//   }
 
-  set firstName(newFirstName) {
-    if (typeof newFirstName === "string" && newFirstName.length > 0)
-      this._firstName = newFirstName;
-    else {
-      console.error("first name must be a non-empty string  ");
-    }
-  }
+//   set firstName(newFirstName) {
+//     if (typeof newFirstName === "string" && newFirstName.length > 0)
+//       this._firstName = newFirstName;
+//     else {
+//       console.error("first name must be a non-empty string  ");
+//     }
+//   }
 
-  set lastName(newLastName) {
-    if (typeof newLastName === "string" && newLastName.length > 0)
-      this._lastName = newLastName;
-    else {
-      console.error("Last name must be a non-empty string  ");
-    }
-  }
+//   set lastName(newLastName) {
+//     if (typeof newLastName === "string" && newLastName.length > 0)
+//       this._lastName = newLastName;
+//     else {
+//       console.error("Last name must be a non-empty string  ");
+//     }
+//   }
 
-  set age(newAge) {
-    if (typeof newAge === "number" && newAge >= 0) {
-      this._age = newAge;
-    } else {
-      console.error("Age must be a non-negative number");
-    }
-  }
+//   set age(newAge) {
+//     if (typeof newAge === "number" && newAge >= 0) {
+//       this._age = newAge;
+//     } else {
+//       console.error("Age must be a non-negative number");
+//     }
+//   }
 
-  get firstName() {
-    return this._firstName;
-  }
-  get lastName() {
-    return this._lastName;
-  }
+//   get firstName() {
+//     return this._firstName;
+//   }
+//   get lastName() {
+//     return this._lastName;
+//   }
 
-  get fullName() {
-    return this.firstName + " " + this.lastName;
-  }
-  get age() {
-    return this._age;
-  }
-}
+//   get fullName() {
+//     return this.firstName + " " + this.lastName;
+//   }
+//   get age() {
+//     return this._age;
+//   }
+// }
 
-const person = new Person("Juhan", "Tamm", 2);
+// const person = new Person("Juhan", "Tamm", 2);
 
-console.log(person.firstName);
-console.log(person.lastName);
-console.log(person.fullName);
-console.log(person.age);
+// console.log(person.firstName);
+// console.log(person.lastName);
+// console.log(person.fullName);
+// console.log(person.age);
+
+//first example// //descturing
+
+// let a = 1;
+// let b = 2;
+
+// [a, b] = [b, a];
+
+// console.log(a);
+// console.log(b);
+// // second example//
+// const colors = ["red", "blue", "white"];
+
+// [colors[0], colors[2]] = [colors[2], colors[0]];
+
+// console.log(colors);
+// //third example//
+// const [firstColor, secondColor, ...extraColors] = colors;
+
+// console.log(firstColor);
+// console.log(secondColor);
+// console.log(extraColors);
+// // forth example//
+// function displayPerson() {
+//   {
+//     firstName, lastName, job;
+//   }
+//   console.log(`name is ${firstName} ${lastName}`);
+//   console.log(`job is ${job}`);
+// }
+// const person1 = {
+//   firstName: "spongebob",
+//   lastName: "squerepants",
+//   job: "fry cook",
+// };
+
+// const person2 = {
+//   firstName: "Patric",
+//   lastName: "Star",
+// };
+
+// const { firstName, lastName, job = "unemployed" } = person1;
+
+// console.log(job);
+// displayPerson();
+
+// nested objects //
+
+// const person = {
+//   fullName: "spongebob",
+//   age: 30,
+//   isStudennt: true,
+//   hobbies: ["hshdiahsdi", "jellyfish hunting", "cooking"],
+//   address: { street: "124 street", city: "tartu", country: "eesti" },
+// };
+
+// console.log(person.fullName);
+// console.log(person.hobbies[2]);
+// console.log(person.address.country);
+// //????????????
+// for (const property in person.address) {
+//   console.log(person.address[property]);
+// }
+
+// class Address {
+//   constructor(street, city, country) {
+//     this.street = street;
+//     this.city = city;
+//     this.country = country;
+//   }
+// }
+
+// class Person {
+//   constructor(name, age, ...address) {
+//     this.name = name;
+//     this.age = age;
+//     this.address = new Address(...address);
+//   }
+// }
+
+// const person1 = new Person(
+//   "spongebob",
+//   30,
+//   "123 street",
+//   "bikini bottom",
+//   "eesti"
+// );
+
+// const person2 = new Person(
+//   "patric",
+//   30,
+//   "123 street",
+//   "bikini bottom",
+//   "eesti"
+// );
+
+// const person3 = new Person(
+//   "juhans",
+//   30,
+//   "123 street",
+//   "bikini bottom",
+//   "eesti"
+// );
+
+// console.log(person3.age);
+
+const fruits = [
+  { name: "apple", color: "red", calores: "364523" },
+  { name: "orange", color: "orange", calores: "1" },
+  { name: "banana", color: "yellow", calores: "122" },
+];
+
+console.log(fruits[0].calores);
+//
+fruits.forEach((fruits) => console.log(fruits.color));
+//
+const fruitNames = fruits.map((fruit) => fruit.name);
+console.log(fruitNames);
+//
+const yellowFruits = fruits.filter((fruit) => fruit.color === "orange");
+const highCalFruits = fruits.filter((fruit) => fruit.calores > 100);
+console.log(yellowFruits);
+console.log(highCalFruits);
+//
+const maxFruits = fruits.reduce((max, fruit) =>
+  fruit.calores > max.calores ? fruit : max
+);
+
+console.log(maxFruits);

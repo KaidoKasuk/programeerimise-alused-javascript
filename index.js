@@ -54,7 +54,7 @@
 // students--;
 // console.log(students);
 
-/* 
+/*
     operator precedence
 1. parenthesis
 2. exponents
@@ -904,38 +904,38 @@
 
 //inheritance
 
-class Animal {
-  alive = true;
+// class Animal {
+//   alive = true;
 
-  Eat() {
-    console.log(`This ${this.name} is eating`);
-  }
+//   Eat() {
+//     console.log(`This ${this.name} is eating`);
+//   }
 
-  sleep() {
-    console.log(`This ${this.name} is sleeping`);
-  }
-}
-class Rabbit extends Animal {
-  constructor(name, age, runSpeed) {
-    super();
-    this.name = name;
-    this.age = age;
-    this.runSpeed = runSpeed;
-  }
+//   sleep() {
+//     console.log(`This ${this.name} is sleeping`);
+//   }
+// }
+// class Rabbit extends Animal {
+//   constructor(name, age, runSpeed) {
+//     super();
+//     this.name = name;
+//     this.age = age;
+//     this.runSpeed = runSpeed;
+//   }
 
-  //   name = "rabbit";
-  //   alive = true;
-  //   Eat() {
-  //     console.log(`This ${this.name} is eating`);
-  //   }
+//   name = "rabbit";
+//   alive = true;
+//   Eat() {
+//     console.log(`This ${this.name} is eating`);
+//   }
 
-  //   sleep() {
-  //     console.log(`This ${this.name} is sleeping`);
-  //   }
-  //   run() {
-  //     console.log(`This ${this.name} is running`);
-  //   }
-}
+//   sleep() {
+//     console.log(`This ${this.name} is sleeping`);
+//   }
+//   run() {
+//     console.log(`This ${this.name} is running`);
+//   }
+//}
 // class Fish extends Animal {
 //   constructor(name, age, runSpeed) {
 //     super();
@@ -1166,26 +1166,165 @@ class Rabbit extends Animal {
 
 // console.log(person3.age);
 
-const fruits = [
-  { name: "apple", color: "red", calores: "364523" },
-  { name: "orange", color: "orange", calores: "1" },
-  { name: "banana", color: "yellow", calores: "122" },
-];
+// const fruits = [
+//   { name: "apple", color: "red", calores: "364523" },
+//   { name: "orange", color: "orange", calores: "1" },
+//   { name: "banana", color: "yellow", calores: "122" },
+// ];
 
-console.log(fruits[0].calores);
-//
-fruits.forEach((fruits) => console.log(fruits.color));
-//
-const fruitNames = fruits.map((fruit) => fruit.name);
-console.log(fruitNames);
-//
-const yellowFruits = fruits.filter((fruit) => fruit.color === "orange");
-const highCalFruits = fruits.filter((fruit) => fruit.calores > 100);
-console.log(yellowFruits);
-console.log(highCalFruits);
-//
-const maxFruits = fruits.reduce((max, fruit) =>
-  fruit.calores > max.calores ? fruit : max
-);
+// console.log(fruits[0].calores);
+// //
+// fruits.forEach((fruits) => console.log(fruits.color));
+// //
+// const fruitNames = fruits.map((fruit) => fruit.name);
+// console.log(fruitNames);
+// //
+// const yellowFruits = fruits.filter((fruit) => fruit.color === "orange");
+// const highCalFruits = fruits.filter((fruit) => fruit.calores > 100);
+// console.log(yellowFruits);
+// console.log(highCalFruits);
+// //
+// const maxFruits = fruits.reduce((max, fruit) =>
+//   fruit.calores > max.calores ? fruit : max
+// );
 
-console.log(maxFruits);
+// console.log(maxFruits);
+
+//sorting //
+
+// let fruits = ["apple", "banana", "cocnut"];
+
+// fruits.sort((a, b) => a - b);
+
+// console.log(fruits);
+
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// numbers.sort();
+// console.log(numbers);
+
+// const people = [
+//   { name: "spongebob", age: 23, gpa: 3.0 },
+//   { name: "Patric", age: 44, gpa: 2.0 },
+//   { name: "Crab", age: 55, gpa: 3.0 },
+//   { name: "Sandy", age: 33, gpa: 4 },
+// ];
+// // people.sort((a, b) => a.age - b.age);
+// people.sort((a, b) => b.name.localeCompare(a.name));
+
+// console.log(people);
+
+//Fisher-Yates algorythm
+// const cards = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
+
+// shuffle(cards);
+
+// console.log(cards);
+
+// function shuffle(array) {
+//   for (let i = array.length - 1; i > 0; i--) {
+//     const random = Math.floor(Math.random() * (i + 1));
+
+//     [array[i], array[random]] = [array[random], array[i]];
+//   }
+// }
+
+const date = new Date();
+// const date = new Date(2024, 0, 1, 2, 3, 4, 5);
+// const date2 = new Date("2024-01-02T12:00:00Z");
+// const date3 = new Date(1700000000000);
+// const year = date.getFullYear();
+// const month = date.getMonth();
+// const day = date.getDate();
+// const hour = date.getHours();
+// const minutes = date.getMinutes();
+// const seconds = date.getSeconds();
+// const dayOfWeek = date.getDay();
+// console.log(year);
+// console.log(month);
+// console.log(day);
+// console.log(hour);
+// console.log(minutes);
+// console.log(seconds);
+// console.log(dayOfWeek);
+
+// date.setFullYear(2024);
+// date.setMonth(0);
+// date.setHours(2);
+// console.log(date);
+
+// const date1 = new Date("2023-12-32");
+// const date2 = new Date("2023-12-30");
+
+// if (date1 > date2) {
+//   console.log("happy new year");
+// }
+
+//closure
+
+// function outer() {
+//   let message = "hello";
+
+//   function inner() {
+//     console.log(message);
+//   }
+//   inner();
+// }
+// outer();
+// function createCounter() {
+//   let count = 10;
+//   function increment() {
+//     count++;
+//     console.log(`Count increased to ${count}`);
+//   }
+
+//   function getCount() {
+//     return count;
+//   }
+
+//   return { increment, getCount };
+// }
+// const counter = createCounter();
+
+// console.log(` The currwent count is ${counter.getCount}`);
+
+//make variablse not acsessable
+
+// function createGame() {
+//   let score = 0;
+//   function increaseScore(points) {
+//     score += points;
+//     console.log(`+ ${points}pts`);
+//   }
+
+//   function decreaseScore(points) {
+//     score -= points;
+//     console.log(`- ${points}pts`);
+//   }
+
+//   function getScore() {
+//     return score;
+//   }
+//   return { increaseScore, decreaseScore, getScore };
+// }
+// const game = createGame();
+// game.decreaseScore(1);
+// game.increaseScore(22);
+// console.log(`the final score is ${game.getScore()}pts`);
+
+// function sayHello() {
+//   window.alert("Hello");
+// }
+
+// // setTimeout(sayHello, 3000);
+// const timeOutId = setTimeout(() => window.alert("hello"), 3000);
+
+// // clearTimeout(timeOutId);
+// let timeOutId;
+// function startTimer() {
+//   setTimeout(() => window.alert("hello"), 3000);
+//   console.log("started");
+// }
+// function clearTimer() {
+//   clearTimeout(timeOutId);
+//   console.log("cleared");
+// }

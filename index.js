@@ -1228,7 +1228,7 @@
 //   }
 // }
 
-const date = new Date();
+// const date = new Date();
 // const date = new Date(2024, 0, 1, 2, 3, 4, 5);
 // const date2 = new Date("2024-01-02T12:00:00Z");
 // const date3 = new Date(1700000000000);
@@ -1328,3 +1328,143 @@ const date = new Date();
 //   clearTimeout(timeOutId);
 //   console.log("cleared");
 // }
+
+//dom//
+
+// document.title = "my website";
+// document.body.style.backgroundColor = "hsl(0,0%,15%)";
+
+// const username = "Villu";
+// const welcomeMsg = document.getElementById("MyH1");
+// welcomeMsg.textContent += username === "" ? `Guest` : username;
+
+// console.dir(document);
+
+// // element selectors don
+
+// const myHeading = document.getElementById("my-Heading");
+// myHeading.style.backgroundColor = "yellow";
+// myHeading.style.textAlign = "center";
+// console.log(myHeading);
+
+// const fruits = document.getElementsByClassName("fruits");
+// console.log(fruits);
+// fruits[0].style.backgroundColor = "red";
+// for (let fruit of fruits) {
+//   fruit.style.backgroundColor = "yellow";
+// }
+
+// Array.from(fruits).forEach((fruit) => {
+//   fruit.style.color = "red";
+// });
+
+// // const h4Elements = document.getElementsByTagName("h4");
+// // const liElements = document.getElementsByTagName("li");
+// // console.log(h4Elements);
+// // h4Elements[0].style.backgroundColor = "yellow";
+// // for (let h4Element of h4Elements) {
+// //   h4Element.style.backgroundColor = "yellow";
+// // }
+
+// // for (let liElement of liElements) {
+// //   liElement.style.backgroundColor = "lightgreen";
+// // }
+
+// // Array.from(h4Elements).forEach((h4Element) => {
+// //   h4Element.style.backgroundColor = "orange";
+// // });
+// // Array.from(liElements).forEach((liElement) => {
+// //   liElement.style.backgroundColor = "purple";
+// // });
+
+// const element = document.querySelector("ol"); //ükskõik mis esimene ülevalt alla .fruits h4 li ul kui puudub element ss null
+// element.style.backgroundColor = "yellow";
+
+// const foods = document.querySelectorAll("li");
+
+// foods[2].style.backgroundColor = "yellow";
+// console.log(foods);
+// foods.forEach((food) => {
+//   food.style.backgroundColor = "yellow";
+// });
+
+// DOM manipulations //
+
+// - - - - - - .fristElementChild - - - - - - //
+// const element = document.getElementById("fruits");
+// const firstChild = element.firstElementChild;
+// firstChild.style.backgroundColor = "yellow";
+
+// const ulElements = document.querySelectorAll("ul"); //iga ul first child
+// ulElements.forEach((ulElements) => {
+//   const firstChild = ulElements.firstElementChild;
+//   firstChild.style.backgroundColor = "yellow";
+// });
+
+// - - - - - - .lastElementChild - - - - - - //
+// const element = document.getElementById("vegetables");
+// const lastChild = element.lastElementChild;
+// lastChild.style.backgroundColor = "yellow";
+
+// const ulElements = document.querySelectorAll("ul"); //iga ul last child
+// ulElements.forEach((ulElements) => {
+//   const lastChild = ulElements.lastElementChild;
+//   lastChild.style.backgroundColor = "yellow";
+// });
+
+// - - - - - - .nextElementSibiling - - - - - - //
+// const element = document.getElementById("orange"); //fruits --> kõik kolm
+// const nextSibiling = element.nextElementSibling;
+// nextSibiling.style.backgroundColor = "yellow";
+
+// - - - - - - .previosElementSibling - - - - - - //
+// const element = document.getElementById("orange"); //vegetables --> kõik kolm
+// const prevSibling = element.previousElementSibling;
+// prevSibling.style.backgroundColor = "yellow";
+
+// // - - - - - - .parentElement - - - - - - //
+// const element = document.getElementById("banana");
+// const parent = element.parentElement;
+// parent.style.backgroundColor = "yellow";
+
+// // - - - - - - .children - - - - - - //
+// const element = document.getElementById("fruits");
+// const children = element.children;
+
+// Array.from(children).forEach((child) => {
+//   child.style.backgroundColor = "yellow";
+// });
+
+// children[1].style.backgroundColor = "yellow";
+
+// // - - - - - - example 1 h1 - - - - - - //
+// // const newH1 = document.createElement("h1");
+
+// // newH1.textContent = "I like pizza";
+// // newH1.id = "muH1";
+// // newH1.style.color = "tomato";
+// // newH1.style.textAlign = "center";
+// // // append alla prepend üles
+// // // document.body.append(newH1);
+// // // document.body.prepend(newH1);
+
+// // document.getElementById("box2").append(newH1);
+// // // -- - - - - - -esimene variant - - - - - -- - - - //
+// // // const box2 = document.getElementById("box2");
+// // // document.body.insertBefore(newH1, box2);
+// // // -- - - - - - -teine variant -- - - - - - -- //
+// // const boxes = document.querySelectorAll(".box");
+// // document.body.insertBefore(newH1, boxes[1]);
+// // // - -- - - ---- - html eemaldamine - -- - - - - -//
+
+// // // // document.body.removeChild(newH1);
+// // // document.getElementById("box1").removeChild(newH1);
+
+// // - - - - - - example 3 li - - - - - - //
+// const newListItem = document.createElement("li");
+// newListItem.textContent = "coconut";
+// newListItem.id = "coconut";
+// newListItem.style.fontWeight = "bold";
+// newListItem.style.backgroundColor = "red";
+
+// document.getElementById("fruits").append(newListItem);

@@ -66,5 +66,17 @@ img {
   font-size: 4rem;
   margin: 10px;
   border: none;
-  background-color: aqua;
+}
+#myButton {
+  border: none;
+}
+.enabled {
+  background-color: rgb(0, 136, 255);
+}
+.hover {
+  box-shadow: 0 0 10px red;
+}
+.disabled {
+  background-color: grey;
+  color: rgb(64, 64, 64);
 }

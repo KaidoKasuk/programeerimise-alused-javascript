@@ -1574,7 +1574,28 @@ let buttons = document.querySelectorAll(".myButtons");
 
 // })
 
-const newButton = document.createElement("button");
-newButton.textContent = "btn 5 hahaha";
-newButton.classList = "myButtons";
-document.body.appendChild(newButton);
+// const newButton = document.createElement("button");
+// newButton.textContent = "btn 5 hahaha";
+// newButton.classList = "myButtons";
+// document.body.appendChild(newButton);
+
+const myButton = document.getElementById("myButton");
+
+// myButton.classList.remove("enabled");
+// myButton.classList.remove("enabled");
+// - -- - - - - - -ISE TEHTUD HOVER SPEUDO - - - - -- - - -- //
+// myButton.addEventListener("mouseover", (event) => {
+//   event.target.classList.add("hover");
+// });
+// myButton.addEventListener("mouseout", (event) => {
+//   event.target.classList.remove("hover");
+// });
+// - -- - - - - - -disabled - - - - -- - - -- //
+myButton.classList.add("enabled");
+myButton.addEventListener("click", (event) => {
+  if (event.target.classList.contains("disabled")) {
+    event.target.textcontent += ">O";
+  } else {
+    event.target.classList.replace("enabled", "disabled");
+  }
+});

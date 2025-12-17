@@ -1468,3 +1468,113 @@
 // newListItem.style.backgroundColor = "red";
 
 // document.getElementById("fruits").append(newListItem);
+
+// --------- event listeners------------//
+//click aka event ja siis callback kui function
+//---------ESIMENE VARIANT---------//
+// function changeColor(event) {
+//   event.target.style.backgroundColor = "red";
+//   event.target.textContent = "hiihiha";
+// }
+// const myBox = document.getElementById("myBox");
+// myBox.addEventListener("click", changeColor);
+// ---------TEINE VARIANT---------//
+// function changeColor(event) {
+//   event.target.style.backgroundColor = "red";
+//   event.target.textContent = "hiihiha";
+// }
+// const myBox = document.getElementById("myBox");
+// myBox.addEventListener("click", (event) => {
+//   event.target.style.backgroundColor = "red";
+//   event.target.textContent = "hiihiha";
+// });
+// ---------MOUSE OVER---------//
+// const myBox = document.getElementById("myBox");
+// myBox.addEventListener("mouseover", (event) => {
+//   event.target.style.backgroundColor = "red";
+//   event.target.textContent = "hiihiha";
+// });
+// myBox.addEventListener("mouseout", (event) => {
+//   event.target.style.backgroundColor = "yellow";
+//   event.target.textContent = "bye";
+// });
+//--------- button ---------//
+// const myButton = document.getElementById("myButton");
+// myButton.addEventListener("click", (event) => {
+//   event.target.textContent = "hiihiha";
+// });
+//--------KEYBOARD KEY PRESS ----------//
+// document.addEventListener("keydown", (event) => {
+//   console.log(event.key);
+// });
+// document.addEventListener("keyup", (event) => {
+//   console.log(`keyup = ${event.key}`);
+// });
+//-----------arrow keys---------//
+// const myBox = document.getElementById("myBox");
+// // document.addEventListener("keydown", (event) => {
+// //   myBox.textContent = "hello";
+// // });
+
+// document.addEventListener("keyup", (event) => {
+//   myBox.textContent = "click me :D";
+// });
+
+// const moveAmount = 10;
+// let x = 0;
+// let y = 0;
+// document.addEventListener("keydown", (event) => {
+//   if (event.key.startsWith("Arrow")) {
+//     switch (event.key) {
+//       case "ArrowUp":
+//         y -= moveAmount;
+//         break;
+//       case "ArrowDown":
+//         y += moveAmount;
+//         break;
+//       case "ArrowLeft":
+//         x -= moveAmount;
+//         break;
+//       case "ArrowRight":
+//         x += moveAmount;
+//         break;
+//     }
+//     myBox.style.top = `${y}px`;
+//     myBox.style.left = `${x}px`;
+//   }
+// });
+
+// --------- HIDE HTML ---------//
+// const myButton = document.getElementById("myButton");
+// const myBox = document.getElementById("myBox");
+// myButton.addEventListener("click", (event) => {
+//   if (myBox.style.visibility === "hidden") {
+//     myBox.style.visibility = "visible";
+//     myButton.textContent = "Hide";
+//   } else {
+//     myBox.style.visibility = "hidden";
+//     myButton.textContent = "show";
+//   }
+// });
+//----------------NODE LIST ------------------//
+
+let buttons = document.querySelectorAll(".myButtons");
+// console.log(buttons);
+
+// buttons.forEach((button) => {
+//   button.style.backgroundColor = "green";
+// });
+// buttons.forEach((button) => {
+//   button.addEventListener("click", (event) => {
+//     event.target.style.backgroundColor = "tomato";
+//   });
+// });
+
+// buttons.forEach(button =>{
+
+// })
+
+const newButton = document.createElement("button");
+newButton.textContent = "btn 5 hahaha";
+newButton.classList = "myButtons";
+document.body.appendChild(newButton);

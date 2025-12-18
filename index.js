@@ -1579,7 +1579,7 @@ let buttons = document.querySelectorAll(".myButtons");
 // newButton.classList = "myButtons";
 // document.body.appendChild(newButton);
 
-const myButton = document.getElementById("myButton");
+// const myButton = document.getElementById("myButton");
 
 // myButton.classList.remove("enabled");
 // myButton.classList.remove("enabled");
@@ -1591,11 +1591,176 @@ const myButton = document.getElementById("myButton");
 //   event.target.classList.remove("hover");
 // });
 // - -- - - - - - -disabled - - - - -- - - -- //
-myButton.classList.add("enabled");
-myButton.addEventListener("click", (event) => {
-  if (event.target.classList.contains("disabled")) {
-    event.target.textcontent += ">O";
-  } else {
-    event.target.classList.replace("enabled", "disabled");
+// myButton.classList.add("enabled");
+// myButton.addEventListener("click", (event) => {
+//   if (event.target.classList.contains("disabled")) {
+//     event.target.textcontent += ">O";
+//   } else {
+//     event.target.classList.replace("enabled", "disabled");
+//   }
+// });
+// - -- - - - - - -PROMISE - - - - -- - - -- //
+
+// function walkDog(callback) {
+//   setTimeout(() => {
+//     console.log("walk the dog");
+//     callback();
+//   }, 1500);
+// }
+// function cleanKitchen(callback) {
+//   setTimeout(() => {
+//     console.log("You clean the kitchen");
+//     callback();
+//   }, 4000);
+// }
+// function youTakeOutTheTrash(callback) {
+//   setTimeout(() => {
+//     console.log("You take out the trash");
+//     callback();
+//   }, 500);
+// }
+
+// walkDog(() => {
+//   cleanKitchen(() => {
+//     youTakeOutTheTrash(() => console.log("you did it"));
+//   });
+// });
+// - -- - - - - - -PROMISE 2 - - - - -- - - -- //
+
+// function walkDog() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("walk the dog");
+//     }, 1500);
+//   });
+// }
+// function cleanKitchen() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("Kitchen cleaning");
+//     }, 1500);
+//   });
+// }
+// function takeOutTrash() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("You take out the trash");
+//     }, 500);
+//   });
+// }
+
+// walkDog()
+//   .then((value) => {
+//     console.log(value);
+//     return cleanKitchen();
+//   })
+//   .then((value) => {
+//     console.log(value);
+//     return takeOutTrash();
+//   })
+//   .then((value) => {
+//     console.log(value);
+//     console.log("you did it");
+//   });
+// - -- - - - - - -PROMISE 3 - - - - -- - - -- //
+//const dogWalked = false
+//if else
+// - -- - - - - - -sync and await  - - - - -- - - -- //
+
+// function walkDog() {}
+// function cleanKitchen() {}
+// function takeOutTrash() {}
+
+// async function theChores() {
+//   try {
+//     const walkDogResult = await walkDog();
+//     console.log(walkDogResult);
+
+//     const cleanKitchenResult = await cleanKitchen();
+//     console.log(cleanKitchenResult);
+//     const takeOutTheTrashResult = await takeOutTrash();
+//     console.log(takeOutTheTrashResult);
+
+//     console.log("You finished all the chorses");
+//   } catch (error) {
+//     console.error("error omg");
+//   }
+// }
+// theChores();
+// - -- - - - - - -JSON js object notation  - - - - -- - - -- //
+// const jsonNames = `["SpongeBob", "Patric", "Sandy"]`;
+// const jsonPerson = `{
+//   name: "SpongeBob",
+//   age: "30",
+//   isEmployed: true,
+//   hobbies: ["yellyfishing", "working", "playing video games"],
+// };`;
+// const jsonPeople = `[
+//   {
+//     name: "SpongeBob",
+//     age: "30",
+//     isEmployed: true,
+//     hobbies: ["yellyfishing", "working", "playing video games"],
+//   },
+//   {
+//     name: "Patric",
+//     age: "40",
+//     isEmployed: false,
+//     hobbies: ["yellyfishing", "sleeping", "playing video games"],
+//   },
+//   {
+//     name: "mrCrab",
+//     age: "45",
+//     isEmployed: false,
+//     hobbies: ["money making", "screaming", "reading money"],
+//   },
+// ]`;
+
+// // const jsonString = JSON.stringify(names);
+// const jsonStringPeople = JSON.stringify(jsonPeople);
+
+// console.log(jsonStringPeople);
+/// OLULINE ----- -- - - - -- - - -SIIN- - - - - -- - - - - - -- - -
+// fetch("person.json")
+//   .then((response) => response.json())
+//   .then((values) =>
+//     values.forEach((value) => {
+//       console.log(value.isEmployed);
+//     })
+//   );
+// - -  - - - -- - - -fetch data from API - - - -- - - -- -
+// fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+//   .then((response) => {
+//     if (!response.ok) {
+//       throw new Error("could not fetch this pokemon");
+//     }
+//     return response.json();
+//   })
+//   .then((data) => console.log(data.weight))
+//   .catch((error) => console.error(error));
+// - - - - -- - - --- - - -- - -- async version - - -- -- - -- - -
+fetchData();
+async function fetchData() {
+  try {
+    const pokemonName = document
+      .getElementById("pokemonName")
+      .value.toLowerCase();
+
+    const response = await fetch(
+      `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
+    );
+
+    if (!response.ok) {
+      throw new Error("Could not fetch resource");
+    }
+
+    const data = await response.json();
+    const pokemonSprite = data.sprites.front_default;
+    const imgElement = document.getElementById("pokemonSprite");
+
+    imgElement.src = pokemonSprite;
+    imgElement.style.display = "block";
+  } catch (error) {
+    console.error(error);
   }
-});
+}

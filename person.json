@@ -1,0 +1,20 @@
+[
+  {
+    "name": "SpongeBob",
+    "age": "30",
+    "isEmployed": true,
+    "hobbies": ["yellyfishing", "working", "playing video games"]
+  },
+  {
+    "name": "Patric",
+    "age": "40",
+    "isEmployed": false,
+    "hobbies": ["yellyfishing", "sleeping", "playing video games"]
+  },
+  {
+    "name": "mrCrab",
+    "age": "45",
+    "isEmployed": false,
+    "hobbies": ["money making", "screaming", "reading money"]
+  }
+]
